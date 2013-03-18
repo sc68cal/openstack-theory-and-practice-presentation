@@ -13,7 +13,7 @@
 		<div id="impress">
 			<div id="intro" class="step slide" data-x="-6000" data-y="-1500">
 				<p>OpenStack - Theory and Practice</p>
-				<img src="img/openstack-cloud-software-vertical-large.png" />
+				<img alt="openstack logo" src="img/openstack-cloud-software-vertical-large.png" />
 			</div>
 			<div id="first" class="step slide" data-x="-4000" data-y="-1500">
 				<h2>Sean M. Collins</h2>
@@ -30,7 +30,7 @@
 			</div>
 			<div id="openstack-arch-essex" class="step slide" data-x="1000" data-y="9000">
 				<h2>OpenStack - Essex</h2>
-				<img width="800" height="500" src="img/nova-concept-int-essex.jpg"/>
+				<img width="800" height="500" src="img/nova-concept-int-essex.jpg" alt="essex architecture diagram" />
 			</div>
 			<div id="openstack-arch-essex-cont" class="step slide" data-x="1000" data-y="10000">
 				<h4> Notes about Essex Architecture</h4>
@@ -54,7 +54,7 @@
 			</div>
 			<div id="openstack-arch-folsom" class="step slide" data-x="3000" data-y="9000">
 				<h2> OpenStack - Folsom </h2>
-				<img width="900" height="500" src="img/openstack-conceptual-arch-folsom.jpg"/>
+				<img width="900" height="500" src="img/openstack-conceptual-arch-folsom.jpg" alt="folsom architecture diagram" />
 			</div>
 			<div id="openstack-arch-folsom-cont" class="step slide" data-x="3000" data-y="10000">
 				<h2> Notes about Folsom Architecture</h2>
@@ -66,6 +66,7 @@
 						</ul>
 					</li>
 					<li>These services were extraced from the Compute service codebase </li>
+				</ul>
 			</div>
 			<div id="networking-section" class="step slide" data-x="0" data-y="1000">
 				<h4>Networking</h4>
@@ -84,11 +85,11 @@
 			</div>
 			<div id="nova-network-flatdhcp" class="step slide" data-x="4000" data-y="1000">
 				<h4>FlatDHCP</h4>
-				<img alt="nova network flatdhcpmanager" src="img/flatdchp-net.jpg"/>
+				<img alt="nova network flatdhcpmanager" src="img/flatdchp-net.jpg" />
 			</div>
 			<div id="nova-network-vlan" class="step slide" data-x="6000" data-y="1000">
 				<h4>VLAN</h4>
-				<img alt="nova network vlanmanager" src="img/vlanmanager-2-hosts-2-tenants.png"/>
+				<img alt="nova network vlanmanager" src="img/vlanmanager-2-hosts-2-tenants.png" />
 				* Image credit - Mirantis
 			</div>
 			<div id="quantum-flat" class=" step slide" data-x="0" data-y="2000">
@@ -96,14 +97,14 @@
 				<ul>
 					<li>Similar to the nova-network FlatDHCP configuration</li>
 				</ul>
-				<img src="img/UseCase-SingleFlat.png"/>
+				<img src="img/UseCase-SingleFlat.png" alt="quantum single flat" />
 			</div>
 			<div id="quantum-multi-flat" class="step slide" data-x="2000" data-y="2000">
 				<h2>Quantum - Multiple Flat Networks</h2>
-				<img src="img/UseCase-MultiFlat.png"/>
+				<img src="img/UseCase-MultiFlat.png" alt="quantum multi flat" />
 			</div>
 		</div>
+		<script src="impress.js/js/impress.js"> </script>
+		<script>impress().init();</script>
 	</body>
-	<script src="impress.js/js/impress.js"></script>
-	<script>impress().init();</script>
 </html>
