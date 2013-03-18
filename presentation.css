@@ -16,5 +16,7 @@
 }
 
 body{
-		background: grey;
+		background: black;
+		color: white;
+		min-height: 740px;
 }
