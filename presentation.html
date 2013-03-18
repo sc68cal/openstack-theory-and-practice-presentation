@@ -10,7 +10,6 @@
 		<link href="presentation.css" rel="stylesheet" /> 
 	</head>
 	<body>
-
 		<div id="impress">
 			<div id="intro" class="step slide" data-x="-6000" data-y="-1500">
 				<p>OpenStack - Theory and Practice</p>
@@ -29,6 +28,14 @@
 					<li>Install on your own hardware - build your own private cloud</li>
 				</ul>
 			</div>
+			<div id="openstack-arch-essex" class="step slide" data-x="1000" data-y="9000">
+				<h2> OpenStack - Essex <h2>
+				<img width="800" height="500" src="img/nova-concept-int-essex.jpg"/>
+			</div>
+			<div id="openstack-arch-folsom" class="step slide" data-x="3000" data-y="9000">
+				<h2> OpenStack - Folsom </h2>
+				<img width="900" height="500" src="img/openstack-conceptual-arch-folsom.jpg"/>
+			</div>
 			<div id="networking-section" class="step slide" data-x="0" data-y="1000">
 				<h4>Networking</h4>
 			</div>
@@ -45,11 +52,11 @@
 			</div>
 			<div id="nova-network-flatdhcp" class="step slide" data-x="4000" data-y="1000">
 				<h4>FlatDHCP</h4>
-				<img src="http://docs.openstack.org/essex/openstack-compute/admin/content/figures/flatdchp-net.jpg"/>
+				<img alt="nova network flatdhcpmanager" src="http://docs.openstack.org/essex/openstack-compute/admin/content/figures/flatdchp-net.jpg"/>
 			</div>
 			<div id="nova-network-vlan" class="step slide" data-x="6000" data-y="1000">
 				<h4>VLAN</h4>
-				<img src="http://www.mirantis.com/wp-content/uploads/2012/07/vlanmanager-2-hosts-2-tenants.png"/>
+				<img alt="nova network vlanmanager" src="http://www.mirantis.com/wp-content/uploads/2012/07/vlanmanager-2-hosts-2-tenants.png"/>
 				* Image credit - Mirantis
 			</div>
 			<div id="quantum-flat" class=" step slide" data-x="0" data-y="2000">
@@ -62,6 +69,7 @@
 			<div id="quantum-multi-flat" class="step slide" data-x="2000" data-y="2000">
 				<h2>Quantum - Multiple Flat Networks</h2>
 				<img src="http://docs.openstack.org/trunk/openstack-network/admin/content/figures/UseCase-MultiFlat.png"/>
+			</div>
 		</div>
 	</body>
 	<script src="impress.js/js/impress.js"></script>
