@@ -22,12 +22,42 @@
 				<img src="http://0.gravatar.com/avatar/c8c56e7cc86180729a188c0804032638?size=300" alt="author photo" />
 			</div>
 			<div id="openstack-intro" class="step slide" data-x="-2000" data-y="-1500">
+				<h2>tl;dr</h2>
 				<ul>
 					<li>Written in Python</li>
 					<li>Provides API compatability with Amazon AWS</li>
-					<li>Serves as "glue" for numerous technologies</li>
+					<li>Install on your own hardware - build your own private cloud</li>
 				</ul>
 			</div>
+			<div id="networking-section" class="step slide" data-x="0" data-y="1000">
+				<h4>Networking</h4>
+			</div>
+			<div id="nova-network" class="step slide" data-x="2000" data-y="1000">
+				<h4>Nova-Network</h4>
+				<ul>
+					<li>Provided four network configuration types</li>
+					<li>Only two are worth talking about</li>
+					<ul>
+						<li>FlatDHCP</li>
+						<li>VLAN</li>
+					</ul>
+				</ul>
+			</div>
+			<div id="nova-network-flatdhcp" class="step slide" data-x="4000" data-y="1000">
+				<h4>FlatDHCP</h4>
+			</div>
+			<div id="nova-network-vlan" class="step slide" data-x="6000" data-y="1000">
+				<h4>VLAN</h4>
+			</div>
+			<div id="quantum-flat" class=" step slide" data-x="0" data-y="2000">
+				<h2>Quantum - Flat Networking</h2>
+				<ul>
+					<li>Similar to the nova-network FlatDHCP configuration</li>
+				<img src="http://docs.openstack.org/trunk/openstack-network/admin/content/figures/UseCase-SingleFlat.png"/>
+			</div>
+			<div id="quantum-multi-flat" class="step slide" data-x="2000" data-y="2000">
+				<h2>Quantum - Multiple Flat Networks</h2>
+				<img src="http://docs.openstack.org/trunk/openstack-network/admin/content/figures/UseCase-MultiFlat.png"/>
 		</div>
 	</body>
 	<script src="impress.js/js/impress.js"></script>
