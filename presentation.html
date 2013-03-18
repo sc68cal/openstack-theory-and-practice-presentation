@@ -1,18 +1,34 @@
-<head lang="en">
-	<head>
+<!doctype html>
+	<head lang="en">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="Description" content="OpenStack - Theory and Practice" />
 		<meta name="author" content="Sean M. Collins" />
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+		<title>OpenStack - Theory and Practice</title>
+		<link href="presentation.css" rel="stylesheet" /> 
 	</head>
 	<body>
 
 		<div id="impress">
-			<div id="intro" class="step slide">
+			<div id="intro" class="step slide" data-x="-6000" data-y="-1500">
 				<p>OpenStack - Theory and Practice</p>
+			</div>
+			<div id="first" class="step slide" data-x="-4000" data-y="-1500">
+				<h2>Sean M. Collins</h2>
+				<h2>@sc68cal</h2>
+				<img src="http://0.gravatar.com/avatar/c8c56e7cc86180729a188c0804032638?size=300" alt="author photo" />
+			</div>
+			<div id="openstack-intro" class="step slide" data-x="-2000" data-y="-1500">
+				<ul>
+					<li>Written in Python</li>
+					<li>Provides API compatability with Amazon AWS</li>
+					<li>Serves as "glue" for numerous technologies</li>
+				</ul>
 			</div>
 		</div>
 	</body>
+	<script src="impress.js/js/impress.js"></script>
+	<script>impress().init();</script>
 </html>
