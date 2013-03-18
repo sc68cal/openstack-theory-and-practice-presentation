@@ -29,12 +29,43 @@
 				</ul>
 			</div>
 			<div id="openstack-arch-essex" class="step slide" data-x="1000" data-y="9000">
-				<h2> OpenStack - Essex <h2>
+				<h2>OpenStack - Essex</h2>
 				<img width="800" height="500" src="img/nova-concept-int-essex.jpg"/>
+			</div>
+			<div id="openstack-arch-essex-cont" class="step slide" data-x="1000" data-y="10000">
+				<h4> Notes about Essex Architecture</h4>
+				<ul>
+					<li> Continued work on breaking compute service up into smaller parts </li>
+					<li> Original code base was monolithic - used to do <strong>everything</strong>
+						<ul>
+							<li>Identity</li>
+							<li>Object Storage</li>
+							<li>Networking</li>
+							<li>Block Storage</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div id="openstack-nova-split" class="step slide" data-x="1000" data-y="12000" >
+				<ul>
+						<li>Original code base (nova) morphed into the Compute service</li>
+						<li>Code that handled everything besides compute was extracted from the nova codebase and became separate projects</li>
+				</ul>
 			</div>
 			<div id="openstack-arch-folsom" class="step slide" data-x="3000" data-y="9000">
 				<h2> OpenStack - Folsom </h2>
 				<img width="900" height="500" src="img/openstack-conceptual-arch-folsom.jpg"/>
+			</div>
+			<div id="openstack-arch-folsom-cont" class="step slide" data-x="3000" data-y="10000">
+				<h2> Notes about Folsom Architecture</h2>
+				<ul>
+					<li>Introduction of two new services:
+						<ul>
+							<li>Block Storage API (Cinder)</li>
+							<li>Network API (Quantum)</li>
+						</ul>
+					</li>
+					<li>These services were extraced from the Compute service codebase </li>
 			</div>
 			<div id="networking-section" class="step slide" data-x="0" data-y="1000">
 				<h4>Networking</h4>
@@ -43,11 +74,12 @@
 				<h4>Nova-Network</h4>
 				<ul>
 					<li>Provided three network configuration types</li>
-					<li>Only two are worth talking about</li>
-					<ul>
-						<li>FlatDHCP</li>
-						<li>VLAN</li>
-					</ul>
+					<li>Only two are worth talking about
+						<ul>
+							<li>FlatDHCP</li>
+							<li>VLAN</li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 			<div id="nova-network-flatdhcp" class="step slide" data-x="4000" data-y="1000">
