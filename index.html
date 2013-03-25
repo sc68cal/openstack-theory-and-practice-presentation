@@ -185,26 +185,7 @@
 				this also implies the port is associated with a subnet, as the IP address was taken from the
 				allocation pool for a specific subnet.</p>
 			</div>
-			<div id="quantum-flat" class="step slide" data-x="0" data-y="2000">
-				<h2>Quantum - Flat Networking</h2>
-				<ul>
-					<li>Similar to the nova-network FlatDHCP configuration</li>
-				</ul>
-				<img src="img/UseCase-SingleFlat.png" alt="quantum single flat" />
-			</div>
-			<div id="quantum-multi-flat" class="step slide" data-x="2000" data-y="2000">
-				<h2>Quantum - Multiple Flat Networks</h2>
-				<img src="img/UseCase-MultiFlat.png" alt="quantum multi flat" />
-			</div>
-			<div id="quantum-provider-router" class="step slide" data-x="4000" data-y="2000">
-				<h2> Quantum - Provider Router </h2>
-				<img src="img/UseCase-SingleRouter.png" alt="Quantum single router">
-			</div>
-			<div id="quantum-multi-router" class="step slide" data-x="6000" data-y="2000">
-				<h2> Quantum - Tenant Routers </h2>
-				<img src="img/UseCase-MultiRouter.png" alt="Quantum single router">
-			</div>
-			<div id="quantum-plugin-design" class="step slide" data-x="8000" data-y="2000">
+			<div id="quantum-plugin-design" class="step slide" data-x="0" data-y="2000">
 				<h2>Quantum - Plugins</h2>
 				<img src="img/quantum-diagram.jpg" />
 				<ul>
@@ -212,7 +193,7 @@
 					<li> Quantum uses plugins, which provide the concrete implementations of the APIs</li>
 				</ul>
 			</div>
-			<div id="quantum-technologies" class="step slide" data-x="10000" data-y="2000">
+			<div id="quantum-technologies" class="step slide" data-x="2000" data-y="2000">
 				<h2> Technologies used by plugins </h2>
 				<ul>
 					<li> 802.1q (VLANs)</li>
@@ -221,7 +202,7 @@
 					<li> GRE Tunnels </li>
 				</ul>
 			</div>
-			<div id="quantum-plugins" class="step slide" data-x="12000" data-y="2000">
+			<div id="quantum-plugins" class="step slide" data-x="4000" data-y="2000">
 				<h2> Quantum Plugins </h2>
 				<ul>
 					<li> OpenVSwitch </li>
@@ -232,7 +213,26 @@
 					<li> And many more! </li>
 				</ul>
 			</div>
-			<div id="demo" class="step slide" data-x="0" data-y="6000">
+			<div id="quantum-flat" class="step slide" data-x="8000" data-y="2000">
+				<h2>Quantum - Flat Networking</h2>
+				<ul>
+					<li>Similar to the nova-network FlatDHCP configuration</li>
+				</ul>
+				<img src="img/UseCase-SingleFlat.png" alt="quantum single flat" />
+			</div>
+			<div id="quantum-multi-flat" class="step slide" data-x="10000" data-y="2000">
+				<h2>Quantum - Multiple Flat Networks</h2>
+				<img src="img/UseCase-MultiFlat.png" alt="quantum multi flat" />
+			</div>
+			<div id="quantum-provider-router" class="step slide" data-x="12000" data-y="2000">
+				<h2> Quantum - Provider Router </h2>
+				<img src="img/UseCase-SingleRouter.png" alt="Quantum single router">
+			</div>
+			<div id="quantum-multi-router" class="step slide" data-x="14000" data-y="2000">
+				<h2> Quantum - Tenant Routers </h2>
+				<img src="img/UseCase-MultiRouter.png" alt="Quantum single router">
+			</div>
+			<div id="demo" class="step slide" data-x="18000" data-y="6000">
 				<h2> Demo </h2>
 				<ul>
 					<li> DevStack
@@ -242,6 +242,7 @@
 					</li>
 					<li> <a href="https://github.com/bcwaldon/vagrant_devstack">Vagrant+Devstack</a> </li>
 				</ul>
+				<h4> Client Libraries </h4>
 				<ul>
 					<li> python-novaclient </a> </li>
 					<li> OpenStack API client for $LANGUAGE</li>
