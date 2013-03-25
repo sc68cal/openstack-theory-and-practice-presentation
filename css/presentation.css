@@ -16,7 +16,14 @@
 }
 
 body{
-		background: black;
-		color: white;
-		min-height: 740px;
+	background: black;
+	color: white;
+	min-height: 740px;
+}
+
+a:link{
+	color: white;
+}
+a:visited{
+	color: white;
 }
