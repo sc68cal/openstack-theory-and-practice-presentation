@@ -80,3 +80,7 @@
 * Automates all the stuff that you have to do as an admin
 * Quickly get up and running
 * Vagrant is great! Completely automates the steps that DevStack does not
+* Two ways to access Nova
+* python-novaclient
+* fog library for Ruby
+* Horizon
