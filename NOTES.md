@@ -50,6 +50,19 @@
 
 * Ideally - if you are running batch type jobs - use Fixed IPs 
 * Some networking modes (like FlatDHCPManager) mix tenants in same L2 domain
+* Floating IPs are the way you connect to an instance from your local machine
+* Nova-network uses iptables to drive everything
+* Security groups are implemented in iptables on the host running nova-network
+* Floating IPs are NAT chain - link floating IP address to instance's fixed IP
+
+## Openstack Quantum
+
+* Nova-network was non-ideal
+* Lots of NAT
+* Code is kind of a mess - some of the oldest code Nova has
+* Dying for a refactor
+* Also - the Administrator has to do a lot of the legwork
+* No way for tenants to define their own network topologies
 
 ## Technologies used by plugins
 
@@ -60,3 +73,10 @@
 
 * Linuxbridge plugin emulates the functionality of Nova-network
 * Plugins for some vendors are for physical switching hardware
+
+## Demo
+
+* DevStack - very handy
+* Automates all the stuff that you have to do as an admin
+* Quickly get up and running
+* Vagrant is great! Completely automates the steps that DevStack does not
