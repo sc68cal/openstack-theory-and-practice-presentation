@@ -64,6 +64,10 @@
 * Also - the Administrator has to do a lot of the legwork
 * No way for tenants to define their own network topologies
 
+# Openstack - Tenant Routers
+* [Quantum API extension](http://docs.openstack.org/api/openstack-network/2.0/content/router_ext_concepts.html)
+* Creates logical routers on the network
+
 ## Technologies used by plugins
 
 * Not a comprehensive list
