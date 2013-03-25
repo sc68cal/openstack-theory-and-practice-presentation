@@ -125,14 +125,26 @@
 					</li>
 				</ul>
 			</div>
-			<div id="nova-network-flatdhcp" class="step slide" data-x="6000" data-y="12000">
-				<h4>Nova-Network FlatDHCPManager</h4>
+			<div id="openstack-securitygroups" class="step slide" data-x="6000" data-y="12000">
+				<h2> Security Groups </h2>
+				<ul>
+					<li> Similar to the Amazon EC2 Security Group API </li>
+					<li> Security group - consists of Rules </li>
+					<li> Each rule has a type, Source CIDR, and port range </li>
+				</ul>
+			</div>
+			<div id="nova-network-flatdhcp" class="step slide" data-x="8000" data-y="12000">
+				<h2>Nova-Network FlatDHCPManager</h2>
 				<img alt="nova network flatdhcpmanager" src="img/flatdchp-net.jpg" />
 			</div>
-			<div id="nova-network-vlan" class="step slide" data-x="8000" data-y="12000">
+			<div id="nova-network-flatdhcp-multi" class="step slide" data-x="10000" data-y="12000">
+				<h2> Nova-Network multi host configuration </h2>
+				<img src="img/ha-net.jpg" alt="nova multi_node" />
+			</div>
+			<div id="nova-network-vlan" class="step slide" data-x="12000" data-y="12000">
 				<h4>Nova-Network VLANManager</h4>
 				<img alt="nova network vlanmanager" src="img/vlanmanager-2-hosts-2-tenants.png" />
-				* Image credit - Mirantis
+				<p>* Image credit - Mirantis</p>
 			</div>
 			<div id="quantum-flat" class=" step slide" data-x="0" data-y="2000">
 				<h2>Quantum - Flat Networking</h2>
@@ -164,7 +176,7 @@
 			<div id="quantum-technologies" class="step slide" data-x="10000" data-y="2000">
 				<h2> Technologies used by plugins </h2>
 				<ul>
-					<li> VLANs</li>
+					<li> 802.1q (VLANs)</li>
 					<li> 802.1Qbh </li>
 					<li> Linux TUN/TAP devices </li>
 					<li> GRE Tunnels </li>
