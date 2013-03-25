@@ -89,29 +89,46 @@
 							<li>Network API (Quantum)</li>
 						</ul>
 					</li>
-					<li>These services were extraced from the Compute service codebase </li>
+					<li>These services were extracted from the Nova codebase </li>
 				</ul>
 			</div>
-			<div id="networking-section" class="step slide" data-x="0" data-y="1000">
+			<div id="networking-section" class="step slide" data-x="0" data-y="12000">
 				<h2>Networking</h2>
 			</div>
-			<div id="nova-network" class="step slide" data-x="2000" data-y="1000">
+			<div id="nova-network" class="step slide" data-x="2000" data-y="12000">
 				<h2>Nova-Network</h2>
 				<ul>
 					<li>Provided three network configuration types</li>
 					<li>Only two are worth talking about
 						<ul>
-							<li>FlatDHCP</li>
-							<li>VLAN</li>
+							<li>FlatDHCPManager</li>
+							<li>VLANManager</li>
 						</ul>
 					</li>
 				</ul>
 			</div>
-			<div id="nova-network-flatdhcp" class="step slide" data-x="4000" data-y="1000">
+			<div id="openstack-ip-types" class="step slide" data-x="4000" data-y="12000">
+				<h2> Instance Networking </h2>
+				<ul>
+					<li> Fixed IPs
+						<ul>
+							<li> RFC 1918 Address </li>
+							<li> Similar to the private IPs given to EC2 instances for cloud-only communication</li>
+						</ul>
+					</li>
+					<li> Floating IPs
+						<ul>
+							<li> IP addresses used to connect instances to the outside world </li>
+							<li> Similar to Elastic IPs from AWS </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div id="nova-network-flatdhcp" class="step slide" data-x="6000" data-y="12000">
 				<h4>Nova-Network FlatDHCPManager</h4>
 				<img alt="nova network flatdhcpmanager" src="img/flatdchp-net.jpg" />
 			</div>
-			<div id="nova-network-vlan" class="step slide" data-x="6000" data-y="1000">
+			<div id="nova-network-vlan" class="step slide" data-x="8000" data-y="12000">
 				<h4>Nova-Network VLANManager</h4>
 				<img alt="nova network vlanmanager" src="img/vlanmanager-2-hosts-2-tenants.png" />
 				* Image credit - Mirantis
@@ -132,8 +149,36 @@
 				<img src="img/UseCase-SingleRouter.png" alt="Quantum single router">
 			</div>
 			<div id="quantum-multi-router" class="step slide" data-x="6000" data-y="2000">
-				<h2> Quantum - Multiple Router </h2>
+				<h2> Quantum - Tenant Routers </h2>
 				<img src="img/UseCase-MultiRouter.png" alt="Quantum single router">
+			</div>
+			<div id="quantum-plugin-design" class="step slide" data-x="8000" data-y="2000">
+				<h2>Quantum - Plugins</h2>
+				<img src="img/quantum-diagram.jpg" />
+				<ul>
+					<li> Quantum provides a common API, for operations that are needed in a software defined networking environment</li>
+					<li> Quantum uses plugins, which provide the concrete implementations of the APIs</li>
+				</ul>
+			</div>
+			<div id="quantum-technologies" class="step slide" data-x="10000" data-y="2000">
+				<h2> Technologies used by plugins </h2>
+				<ul>
+					<li> VLANs</li>
+					<li> 802.1Qbh </li>
+					<li> Linux TUN/TAP devices </li>
+					<li> GRE Tunnels </li>
+				</ul>
+			</div>
+			<div id="quantum-plugins" class="step slide" data-x="12000" data-y="2000">
+				<h2> Quantum Plugins </h2>
+				<ul>
+					<li> OpenVSwitch </li>
+					<li> Cisco </li>
+					<li> LinuxBridge </li>
+					<li> Microsoft Hyper-V </li>
+					<li> Nicira </li>
+					<li> And many more! </li>
+				</ul>
 			</div>
 		</div>
 		<script src="impress.js/js/impress.js"> </script>
