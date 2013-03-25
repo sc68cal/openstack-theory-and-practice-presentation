@@ -146,11 +146,44 @@
 				<img alt="nova network vlanmanager" src="img/vlanmanager-2-hosts-2-tenants.png" />
 				<p>* Image credit - Mirantis</p>
 			</div>
-			<div id="quantum-intro" class="step slide" data-x="-2000" data-y="2000">
+			<div id="quantum-intro" class="step slide" data-x="-10000" data-y="2000">
 				<h2> Openstack Quantum </h2>
 				<ul>
 					<li> Networking as a service </li>
 				</ul>
+			</div>
+			<div id="quantum-objects" class="step slide" data-x="-8000" data-y="2000">
+				<h2><a href="http://docs.openstack.org/api/openstack-network/2.0/content/Concepts-d1e369.html"> Quantum - Concepts </a></h2>
+				<ul>
+					<li> <a href="http://docs.openstack.org/api/openstack-network/2.0/content/Concepts-d1e369.html#Network">Network</a></li>
+					<li> <a href="http://docs.openstack.org/api/openstack-network/2.0/content/Concepts-d1e369.html#Subnet"> Subnet </a></li>
+					<li> <a href="http://docs.openstack.org/api/openstack-network/2.0/content/Concepts-d1e369.html#Port"> Port </a></li>
+				</ul>
+			</div>
+			<div id="quantum-network" class="step slide" data-x="-6000" data-y="2000">
+				<h2>Quantum Network</h2>
+				<p>A network is an isolated virtual layer-2 broadcast domain that is typically reserved
+				for the tenant who created it unless the network is configured to be shared.
+				Tenants can create multiple networks until they reach the thresholds specified by per-tenant quotas.</p>
+
+				<p>In the Quantum API v2.0, the network is the main entity. Ports and subnets are always associated with a network.</p>
+			</div>
+			<div id="quantum-subnet" class="step slide" data-x="-4000" data-y="2000">
+				<h2>Quantum Subnet</h2>
+				<p>A subnet represents an IP address block that can be used to assign IP addresses to virtual instances.
+				Each subnet must have a CIDR and must be associated with a network. IPs can be either selected from the whole
+				subnet CIDR or from allocation pools that can be specified by the user.</p>
+
+				<p>A subnet can also optionally have a gateway, a list of dns name servers, and host routes.
+				This information is pushed to instances whose interfaces are associated with the subnet</p>
+			</div>
+			<div id="quantum-port" class="step slide" data-x="-2000" data-y="2000">
+				<h2> Quantum Port</h2>
+				<p>A port represents a virtual switch port on a logical network switch. Virtual instances attach their
+				interfaces into ports. The logical port also defines the MAC address and the IP address(es) to be
+				assigned to the interfaces plugged into them. When IP addresses are associated to a port,
+				this also implies the port is associated with a subnet, as the IP address was taken from the
+				allocation pool for a specific subnet.</p>
 			</div>
 			<div id="quantum-flat" class="step slide" data-x="0" data-y="2000">
 				<h2>Quantum - Flat Networking</h2>
