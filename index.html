@@ -54,6 +54,95 @@
 					<li> Dashboard (Horizon) </li>
 				</ul>
 			</div>
+			<div id="openstack-arch-essex" class="step slide" data-x="-22000" data-y="0">
+				<h2>OpenStack - Essex</h2>
+				<img width="800" height="500" src="img/nova-concept-int-essex.jpg" alt="essex architecture diagram" />
+			</div>
+			<div id="openstack-keystone" class="step slide" data-x="-20000" data-y="0" >
+				<h2> Keystone </h2>
+				<ul>
+					<li> Ties all the other components together </li>
+					<li> Authorization
+						<ul>
+							<li> Tenants</li>
+							<li> Users </li>
+							<li> Roles </li>
+						</ul>
+					</li>
+					<li> Service Catalog 
+						<ul>
+							<li> Regions </li>
+							<li> APIs available in each Region </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div id="openstack-glance" class="step slide" data-x="-20000" data-y="2000">
+				<h2> Glance </h2>
+				<ul>
+					<li> Stores Virtual Machine Images </li>
+					<li> AMI </li>
+					<li> OVF </li>
+					<li> Raw disks </li>
+				</ul>
+			</div>
+			<div id="openstack-nova-service" class="step slide" data-x="-20000" data-y="4000">
+				<h2> Nova </h2>
+				<ul>
+					<li> Run VMs </li>
+					<li> Flavors </li>
+					<li> Persistent Block Storage </li>
+					<li> Ephemeral Storage </li>
+				</ul>
+				Flavors have:
+				<ul>
+					<li> # CPUs </li>
+					<li> Memory </li>
+					<li> Ephemeral Storage Size </li>
+				</ul>
+			</div>
+			<div id="openstack-nova-request" class="step slide" data-x="-20000" data-y="6000">
+				<h2> Nova API Request </h2>
+				<pre>
+{
+    "server" : {
+	"name" : "new-server-test",
+	"imageRef" : 
+		"http://openstack.example.com/openstack/images/
+		70a599e0-31e7-49b7-b260-868f441e862b",
+	"flavorRef" : 
+		"http://openstack.example.com/openstack/
+		flavors/1",
+	"metadata" : {
+	    "My Server Name" : "Apache1"
+	},
+    }
+}
+				</pre>
+			</div>
+			<div id="openstack-nova-response" class="step slide" data-x="-20000" data-y="8000">
+				<h2> Nova API response </h2>
+				<pre>
+{
+    "server": {
+        "adminPass": "wfksH3GTTseP",
+        "id": "440cf918-3ee0-4143-b289-f63e1d2000e6",
+        "links": [
+            {
+		"href": "http://openstack.example.com/v2/
+			openstack/servers/440cf918-3ee0-4143-b289-f63e1d2000e6",
+                "rel": "self"
+            },
+            {
+		"href": "http://openstack.example.com/openstack/
+			servers/440cf918-3ee0-4143-b289-f63e1d2000e6",
+                "rel": "bookmark"
+            }
+        ]
+    }
+}
+			    </pre>
+			</div>
 			<div id="openstack-arch-concepts" class="step slide" data-x="-10000" data-y="-3000">
 				<h2> OpenStack Architecture </h2>
 				<ul>
@@ -62,7 +151,7 @@
 				</ul>
 			</div>
 			<div id="openstack-create-vm" class="step slide" data-x="-12000" data-y="-1500">
-				<h4>Compute Example: "Create a VM "</h4>
+				<h4>Compute API Example: "Create a VM "</h4>
 				<p>Plugins for each hypervisor handle how to accomplish this request</p>
 				<ul>
 					<li> <a href="https://github.com/openstack/nova/tree/master/nova/virt/libvirt">libvirt/KVM</a> </li>
@@ -71,10 +160,6 @@
 					<li> <a href="https://github.com/openstack/nova/tree/master/nova/virt/vmwareapi">VMWare</a> </li>
 					<li> <a href="https://github.com/openstack/nova/tree/master/nova/virt/baremetal">Bare Metal provisioning</a></li>
 				</ul>
-			</div>
-			<div id="openstack-arch-essex" class="step slide" data-x="1000" data-y="9000">
-				<h2>OpenStack - Essex</h2>
-				<img width="800" height="500" src="img/nova-concept-int-essex.jpg" alt="essex architecture diagram" />
 			</div>
 			<div id="openstack-arch-folsom" class="step slide" data-x="3000" data-y="9000">
 				<h2> OpenStack - Folsom </h2>
