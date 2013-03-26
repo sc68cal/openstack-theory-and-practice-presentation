@@ -54,7 +54,7 @@
 					<li> Dashboard (Horizon) </li>
 				</ul>
 			</div>
-			<div id="openstack-arch-essex" class="step slide" data-x="-22000" data-y="0">
+			<div id="openstack-arch-essex" class="step slide" data-x="-22000" data-y="0:G">
 				<h2>OpenStack - Essex</h2>
 				<img width="800" height="500" src="img/nova-concept-int-essex.jpg" alt="essex architecture diagram" />
 			</div>
@@ -192,7 +192,18 @@
 					</li>
 				</ul>
 			</div>
-			<div id="openstack-ip-types" class="step slide" data-x="4000" data-y="12000">
+			<div id="openstack-nova-network-internals" class="step slide" data-x="4000" data-y="12000">
+				<h2> Nova Network Internals </h2>
+				<ul>
+					<li> Bridge 802.1d standard </li>
+					<li> Hypervisor type determines implementation (Linux bridge, Xen bridge, etc)
+					<li> Puts the host's interface into promiscuous mode </li>
+					<li> Instances on the host attach to the bridge pseudo-device </li>
+					<li> Traffic from VM interface sent down the bridge, bridge sends to the physical device </li>
+					<li> Physical device transmits on the network </li>
+				</ul>
+			</div>
+			<div id="openstack-ip-types" class="step slide" data-x="6000" data-y="12000">
 				<h2> Instance Networking </h2>
 				<ul>
 					<li> Fixed IPs
@@ -209,7 +220,7 @@
 					</li>
 				</ul>
 			</div>
-			<div id="openstack-securitygroups" class="step slide" data-x="6000" data-y="12000">
+			<div id="openstack-securitygroups" class="step slide" data-x="8000" data-y="12000">
 				<h2> Security Groups </h2>
 				<ul>
 					<li> Similar to the Amazon EC2 Security Group API </li>
@@ -217,15 +228,15 @@
 					<li> Each rule has a type, Source CIDR, and port range </li>
 				</ul>
 			</div>
-			<div id="nova-network-flatdhcp" class="step slide" data-x="8000" data-y="12000">
+			<div id="nova-network-flatdhcp" class="step slide" data-x="10000" data-y="12000">
 				<h2>Nova-Network FlatDHCPManager</h2>
 				<img alt="nova network flatdhcpmanager" src="img/flatdchp-net.jpg" />
 			</div>
-			<div id="nova-network-flatdhcp-multi" class="step slide" data-x="10000" data-y="12000">
+			<div id="nova-network-flatdhcp-multi" class="step slide" data-x="12000" data-y="12000">
 				<h2> Nova-Network multi host configuration </h2>
 				<img src="img/ha-net.jpg" alt="nova multi_node" />
 			</div>
-			<div id="nova-network-vlan" class="step slide" data-x="12000" data-y="12000">
+			<div id="nova-network-vlan" class="step slide" data-x="12000" data-y="14000">
 				<h2>Nova-Network VLANManager</h2>
 				<img alt="nova network vlanmanager" src="img/vlanmanager-2-hosts-2-tenants.png" />
 				<p>* Image credit - Mirantis</p>
