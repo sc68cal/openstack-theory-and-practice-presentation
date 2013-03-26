@@ -1,8 +1,11 @@
 .step {
-	position: relative;
-	width: 1200px;
+	position: absolute;
+	width: 1000px;
 	padding: 40px;
-	margin: 20px auto;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing:    border-box;
@@ -19,6 +22,16 @@ body{
 	background: black;
 	color: white;
 	min-height: 740px;
+}
+
+img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h2{
+	text-align: center;
 }
 
 a:link{
