@@ -193,14 +193,30 @@
 				</ul>
 			</div>
 			<div id="openstack-nova-network-internals" class="step slide" data-x="4000" data-y="12000">
-				<h2> Nova Network Internals </h2>
+				<h2> Nova Networking Internals on Compute nodes</h2>
 				<ul>
-					<li> Bridge 802.1d standard </li>
-					<li> Hypervisor type determines implementation (Linux bridge, Xen bridge, etc)
-					<li> Puts the host's interface into promiscuous mode </li>
-					<li> Instances on the host attach to the bridge pseudo-device </li>
-					<li> Traffic from VM interface sent down the bridge, bridge sends to the physical device </li>
-					<li> Physical device transmits on the network </li>
+					<li> L2 (Ethernet)
+						<ul>
+							<li> Bridge 802.1d standard </li>
+							<li> Hypervisor type determines implementation (Linux bridge, Xen bridge, etc)
+							<li> Puts the host's interface into promiscuous mode </li>
+							<li> Instances on the host attach to the bridge pseudo-device </li>
+							<li> Traffic from VM interface sent down the bridge, bridge sends to the physical device </li>
+							<li> Physical device transmits </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div id="openstack-nova-network-internals2" class="step slide" data-x="4000" data-y="14000">
+				<h2> Nova Networking Internals on Nova-Network host </h2>
+				<p> In simple setups, one machine runs Nova-Network and provides L3 connectivity </p>
+				<ul>
+					<li> L3 (TCP/IP)
+						<ul>
+							<li> Linux iptables </li>
+							<li> NAT chains </li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 			<div id="openstack-ip-types" class="step slide" data-x="6000" data-y="12000">
@@ -227,6 +243,7 @@
 					<li> Security group - consists of rules </li>
 					<li> Each rule has a type, Source CIDR, and port range </li>
 				</ul>
+				<p> Security Group API calls are translated into iptables chains, on the host running nova-network</p>
 			</div>
 			<div id="nova-network-flatdhcp" class="step slide" data-x="10000" data-y="12000">
 				<h2>Nova-Network FlatDHCPManager</h2>
@@ -282,7 +299,7 @@
 			</div>
 			<div id="quantum-plugin-design" class="step slide" data-x="0" data-y="2000">
 				<h2>Quantum - Plugins</h2>
-				<img src="img/quantum-diagram.jpg" />
+				<img src="img/quantum-diagram.jpg" alt="quantum architecutre" />
 				<ul>
 					<li> Quantum provides a common API, for operations that are needed in a software defined networking environment</li>
 					<li> Quantum uses plugins, which provide the concrete implementations of the APIs</li>
